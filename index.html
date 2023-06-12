@@ -250,7 +250,8 @@
                letting me know some awesome ideas! You can also email me at <a class="externalLink" href="mailto:kirstenddemko@gmail.com">kirstenddemko@gmail.com</a>.
             </p>
          </div>
-         <form class="contact-form" id="contactform" method="POST" action="contact.php">
+         <form class="contact-form" id="contactform" data-netlify="true" method="POST">
+            <input type="hidden" name="form-name" value="contact">
             <div class="wrapper">
                <div class="names">
                   <label for="firstname">First name</label>
@@ -264,7 +265,7 @@
                <input type="text" name="subject" id="subject" required>
                <label for="message">Message</label>
                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-               <button type="submit" name>Send</button>
+               <input type="submit" value="submit">Send</button>
             </div>
          </form>
          <br>
