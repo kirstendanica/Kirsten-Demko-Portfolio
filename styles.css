@@ -10,18 +10,18 @@ body {
   background-color: hsl(30, 8%, 95%);
 }
 .parallax {
-  background: url("/assets/images/pexels-kamran.jpg") repeat fixed 100%;
+  background: url("./assets/images/pexels-kamran.jpg") repeat fixed 100%;
   background-size: cover;
   color: aliceblue;
 }
 .parallax-1 {
-  background: url("/assets/images/evie-s-Sw7f58YJbc0-unsplash.jpg") repeat fixed
+  background: url("./assets/images/evie-s-Sw7f58YJbc0-unsplash.jpg") repeat fixed
     100%;
   background-size: cover;
   color: aliceblue;
 }
 .parallax-2 {
-  background: url("/assets/images/thea-a-DMOpUuhvvEk-unsplash.jpg") repeat fixed
+  background: url("./assets/images/thea-a-DMOpUuhvvEk-unsplash.jpg") repeat fixed
     100%;
   background-size: cover;
   color: aliceblue;
