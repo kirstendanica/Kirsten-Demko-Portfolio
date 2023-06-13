@@ -18,12 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const ajaxForms = document.querySelectorAll("form[data-ajax]");
 
   function showAlert(message, timeout = 3000) {
-    const alertElement = document.getElementById("custom-alert");
+    const alertElement = document.getElementById("alert-message");
+    const submitButton = document.querySelector("button[type='submit']");
     alertElement.textContent = message;
-    alertElement.classList.remove("hidden");
+    alertElement.classList.add("visible");
+    submitButton.style.display = "none";
 
     setTimeout(() => {
-      alertElement.classList.add("hidden");
+      alertElement.classList.remove("visible");
+      submitButton.style.display = "inline";
     }, timeout);
   }
 
