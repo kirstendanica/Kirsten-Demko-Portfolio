@@ -746,7 +746,7 @@ button {
   }
 
   .alert-message {
-    color: #f44336;
+    color: hsl(0, 0%, 11%);
     margin-left: 1rem;
     display: none;
   }
