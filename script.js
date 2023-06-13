@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
 
       const formData = new FormData(form);
-      const action = form.getAttribute("data-netlify") ? "/?no-cache=1" : form.action;
+      formData.append("no-cache", "1"); // Add the no-cache field
+      const action = form.getAttribute("data-netlify") ? "/" : form.action;
 
       fetch(action, {
         method: "POST",
@@ -31,17 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => {
           if (response.ok) {
             // Form submitted successfully
-            alert("Thank you! : )");
+            alert("Form submitted successfully!");
             form.reset();
           } else {
             // Error submitting form
-            alert("Hmm, looks like there was a mistake... Please try again!");
+            alert("There was an error submitting the form. Please try again.");
           }
         })
         .catch((error) => {
           // Network error
-          console.error("Error submitting your information", error);
-          alert("There was a network error submittin your information. Please try again!");
+          console.error("Error submitting form:", error);
+          alert("There was a network error submitting the form. Please try again.");
         });
     });
   });
