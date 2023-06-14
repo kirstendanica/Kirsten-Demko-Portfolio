@@ -5,13 +5,6 @@
   --btn-style: 1px solid var(--dark-gray);
 }
 
-body {
-  font-family: "Helvetica", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--light-gray);
-  color: var(--dark-gray);
-}
 
 
 h1, h2, h3, h4, h5, h6, p {
@@ -63,8 +56,8 @@ li {
 }
 
 @font-face {
-  font-family: "Droid Sans";
-  src: url(./assets/fonts/DroidSerif-Regular.ttf) format(truetype);
+  font-family: "HelveticaReg";
+  src: url(./assets/fonts/HelveticaRegular.otf) format(opentype);
 }
 
 @font-face {
@@ -91,6 +84,14 @@ li {
   font-family: "Aloevera";
   src: url(./assets/fonts/Aloeveraoutline-Light.otf) format(opentype);
 }
+
+body {
+  font-family: "HelveticaReg", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+  }
 
 header {
   color: hsl(0, 0%, 20%);
@@ -458,12 +459,12 @@ img {
 }
 
 p {
-  font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: normal;
   color: hsl(0, 0%, 20%);
   text-align: center;
+  font-family: "Helvetica-Reg", sans-serif;
 }
 
 .about-h1 {
@@ -490,7 +491,7 @@ p {
 }
 
 .skills-section {
-  padding: 60px 0;
+  padding: 30px
 }
 
 .skills-section .wrapper {
