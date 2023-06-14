@@ -1,14 +1,39 @@
-* {
+:root {
+  --dark-gray: hsl(0, 0%, 20%);
+  --light-gray: hsl(30, 8%, 95%);
+  --transition: 0.5s ease;
+  --btn-style: 1px solid var(--dark-gray);
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  background-size: 100%;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
 }
-body {
-  background-color: hsl(30, 8%, 95%);
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
+
+a {
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
 .parallax {
   background: url("./assets/images/pexels-kamran.jpg") repeat fixed 100%;
   background-size: cover;
@@ -39,25 +64,32 @@ body {
 
 @font-face {
   font-family: "Droid Sans";
-  src: url(/assets/fonts/DroidSerif-Regular.ttf) format(truetype);
+  src: url(./assets/fonts/DroidSerif-Regular.ttf) format(truetype);
 }
 
-/* h3 {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-} */
-
-h1 {
-  text-align: center;
-  font-family: "Droid Sans", serif;
-  color: hsl(0, 0%, 20%);
+@font-face {
+  font-family: "Lust";
+  src: url(./assets/fonts/Lust-Script.ttf) format(truetype);
 }
 
-h2 {
-  font-family: "Droid Sans", serif;
-  color: hsl(0, 0%, 20%);
+@font-face {
+  font-family: "Helvetica";
+  src: url(./assets/fonts/HelveticaNeue.otf) format(opentype);
+}
+
+@font-face {
+  font-family: "Lulo";
+  src: url(./assets/fonts/Lulo.otf) format(opentype);
+}
+
+@font-face {
+  font-family: "Droid Sans";
+  src: url(./assets/fonts/DroidSerif-Regular.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "Aloevera";
+  src: url(./assets/fonts/Aloeveraoutline-Light.otf) format(opentype);
 }
 
 header {
@@ -74,14 +106,12 @@ header h1 {
   position: relative;
   margin-bottom: 15px;
   line-height: 1.2;
-  font-family: "Droid Sans", serif;
   letter-spacing: 0.25rem;
   font-weight: lighter;
   padding: 0;
 }
 
 header h2 {
-  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 0.1rem;
@@ -96,7 +126,6 @@ header h2 {
 }
 
 .main-quote h3 {
-  font-family: "Droid Sans", serif;
   letter-spacing: 0.25rem;
   color: hsl(0, 0%, 20%);
   margin: 25px 0;
@@ -108,11 +137,7 @@ header h2 {
   }
 }
 
-.wrapper {
-  max-width: 1200px;
-  width: 80%;
-  margin: 0 auto;
-}
+
 
 .hreflink {
   text-transform: uppercase;
@@ -133,7 +158,6 @@ a {
 }
 
 .contact-me h3 {
-  font-family: "Droid Sans", serif;
   padding: 25px 25px;
   margin: -5px 0;
 }
@@ -355,7 +379,6 @@ footer .main-logo {
 h4 {
   text-align: center;
   font-size: 5rem;
-  font-family: "Lato", sans-serif;
 }
 img {
   max-width: 100%;
@@ -364,9 +387,38 @@ img {
   margin-left: 20%;
 }
 
+
+
 .image-container {
   width: 50%;
   flex-basis: 40%;
+  text-align: center;
+}
+
+.image-container, .text-container {
+  padding: 10px;
+}
+
+.namee {
+  font-family: "Lust", 'Times New Roman', Times, serif;
+  color: hsl(4, 6%, 45%);
+  letter-spacing: 0.2rem;
+  font-size: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+   
+  }
+  p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -415,8 +467,8 @@ p {
 }
 
 .about-h1 {
-  padding: 24px;
-  font-size: 4rem;
+  padding: 4rem;
+  font-size: 2rem;
 }
 
 .container {
@@ -449,7 +501,6 @@ p {
   font-size: 2rem;
   margin: 20px;
   line-height: 1.2;
-  font-family: "Droid Sans", serif;
   letter-spacing: 0.25rem;
   font-weight: lighter;
 }
@@ -461,8 +512,7 @@ p {
 
 .skills li {
   margin-bottom: 30px;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
@@ -573,16 +623,29 @@ ul {
   color: hsl(9, 4%, 35%);
 }
 
+.arrow-up,
+.arrow-down {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  opacity: 0;
+  transition: opacity var(--transition-duration) var(--transition-easing);
+}
+
 .arrow-up {
   top: 10px;
   left: 50%; /* Center the arrow horizontally */
   transform: translateX(-50%);
+  border-bottom: 20px solid var(--light-gray);
 }
 
 .arrow-down {
   bottom: 10px;
   left: 50%; /* Center the arrow horizontally */
   transform: translateX(-50%);
+  border-top: 20px solid var(--light-gray);
 }
 
 .arrow-wrapper {
@@ -650,7 +713,6 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
