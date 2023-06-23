@@ -1,19 +1,13 @@
-const showMenu = (toggleId, navId) => {
-    const toggle = document.querySelector(toggleId),
-    nav = document.querySelector(navId)
+// Menu
+document.addEventListener("DOMContentLoaded", function () {
+  // Menu toggler
+  document.querySelector(".toggler").addEventListener("click", function () {
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("show-menu");
+  });
+});
 
-    if (toggle && nav) {
-        toggle.addEventListener("click", () => {
-          nav.classList.toggle("show");
-          toggle.classList.toggle("show");
-        })
-      }
-    };
-    
-    showMenu('.toggler', '.toggler-open');
-
-
-/* -- Contact form -- */
+// Contact form
 document.addEventListener("DOMContentLoaded", function () {
   const ajaxForms = document.querySelectorAll("form[data-ajax]");
 
@@ -100,3 +94,8 @@ imageWraps.forEach((imageWrap) => {
     scrollCont.scrollTop += scrollAmount;
   });
 });
+
+// Copyright year grabber
+window.onload = function () {
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+};
