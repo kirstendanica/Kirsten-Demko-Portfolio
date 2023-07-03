@@ -54,6 +54,48 @@ ul {
     justify-content: center !important;
     align-items: center !important;
   }
+  .skills-section {
+    margin: 0 auto !important;
+  }
+  .text-container p {
+    font-size: 0.8rem !important;
+  }
+  .text-container h1 {
+    font-size: 1.2rem !important;
+    font-weight: 400;
+    text-align: center;
+  }
+  .text-container {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 80% !important;
+  }
+  .image-container {
+    width: auto;
+  }
+  .image-container img {
+    width: 80% !important;
+  }
+  .namee {
+    font-size: 2rem !important;
+  }
+  .display-work {
+    border: 1px solid #ccc !important;
+  }
+  .image-wrap {
+    border: 1px solid #ccc !important;
+    position: relative !important;
+  }
+  .personal-art p {
+    font-size: 0.7rem !important;
+  }
+  .personal-art {
+    margin: 0 auto !important;
+    padding: 0.6rem !important;
+  }
+  .art-wrap {
+    margin: 0 auto !important;
+  }
 }
 
 
