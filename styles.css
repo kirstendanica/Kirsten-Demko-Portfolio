@@ -19,8 +19,44 @@ a:hover {
   text-decoration-color: #353434 
 }
 li {
-  list-style-type: none 
+  list-style-type: none;
 }
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 667px) {
+  .skills {
+    flex-direction: column;
+    margin: 0rem !important;
+  }
+  li {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+  h2 {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+  }
+  .myphotos .wrapper {
+    padding: 0;
+    margin-left: -2.5rem;
+  }
+  .myphotos .grid-container {
+    grid-gap: 1px !important;
+    margin-top: -1rem !important;
+  }
+  .myphotos {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
@@ -193,6 +229,10 @@ a:hover {
   nav {
       background-color: #a4a2ba 
   }
+}
+
+.icon-bar i {
+  overflow:visible;
 }
 .side-bar {
   position: fixed;
@@ -833,10 +873,10 @@ ul.img-list li:hover span.text-content {
       top: 0;
       background-color: #a4a2ba;
       width: 100vw;
-      height: 8% 
+      height: 8%;
   }
   .toggler i {
-      padding-bottom: .5rem 
+      padding-bottom: .5rem;
   }
 }
 .copyright-content {
