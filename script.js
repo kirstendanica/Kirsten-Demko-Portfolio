@@ -2,14 +2,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Menu toggler
   document.querySelector(".toggler").addEventListener("click", function () {
-    const menu = document.querySelector("nav ul");
+    const menu = document.querySelector(".navigation");
     menu.classList.toggle("show-menu");
   });
 });
 
-// 
-
-/* -- Projects -- */
+// Projects
 const imageWraps = document.querySelectorAll('.image-wrap');
 
 const scrollAmount = 100; // Amount to scroll in pixels
@@ -49,7 +47,7 @@ imageWraps.forEach((imageWrap) => {
   });
 });
 
-// Copyright year grabber
+// Grab year for copyright
 window.onload = function () {
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 };

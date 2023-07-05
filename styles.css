@@ -867,7 +867,7 @@ ul.img-list li:hover span.text-content {
       margin-top: 2rem;
       font-size: 1rem 
   }
-  .contact-me, .main-quote, .menu-hidden  {
+  .contact-me, .main-quote {
       display: none;
   }
   .icon-bar {
@@ -907,7 +907,6 @@ ul.img-list li:hover span.text-content {
   }
   nav ul {
       display: none;
-      padding-top: 2rem 
   }
   .navigation .side-bar .toggler {
       display: inline-block;
@@ -916,6 +915,10 @@ ul.img-list li:hover span.text-content {
       background-color: #a4a2ba;
       width: 100vw;
       height: 8%;
+  }
+
+  .navigation.show-menu ul {
+    display: block;
   }
   .toggler i {
       padding-bottom: .5rem;
