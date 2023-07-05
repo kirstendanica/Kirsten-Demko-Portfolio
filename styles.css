@@ -26,7 +26,7 @@ ul {
 }
 
 .navigation.show-menu ul {
-  position: fixed;
+  display: none;
   top: 3.8%;
   left: 0;
   width: 100%;
@@ -740,16 +740,46 @@ button {
       width: 100% 
   }
 }
+
+@media (max-width: 667px) {
+  .contact-form {
+    width: 100%;
+    gap: 20px;
+  }
+  .contact-form .wrapper {
+    padding: 20px;
+  }
+  .contact-form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  .contact-form textarea {
+    height: 100px;
+  }
+  .contact-form button {
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+}
+
 .connect-h2 {
   font-size: 3rem;
   text-align: center;
   color: #333;
   font-family: Inter, sans-serif;
-  font-weight: 300 
+  font-weight: 300;
 }
 .personal-art {
-  margin: 4rem;
-  padding: 4rem 4rem 
+  margin: 2rem;
+  padding: 2rem;
 }
 .art-wrap {
   max-width: 100%;
@@ -883,6 +913,15 @@ ul.img-list li:hover span.text-content {
   }
   .contact-me, .main-quote {
       display: none;
+  }
+  .navigation.show-menu ul {
+    position: fixed;
+    top: 3.8%;
+    left: 0;
+    width: 100%;
+    height: 36%; 
+    background-color: #a4a2ba;
+    z-index: 999;
   }
   .icon-bar {
       top: 1.5%;
