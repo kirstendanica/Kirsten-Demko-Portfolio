@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Projects
 const imageWraps = document.querySelectorAll('.image-wrap');
-
-const scrollAmount = 100; // Amount to scroll in pixels
+const scrollAmount = 100;
 
 imageWraps.forEach((imageWrap) => {
   const scrollCont = imageWrap.querySelector('.scroll-cont');
@@ -18,8 +17,7 @@ imageWraps.forEach((imageWrap) => {
   const arrowDown = imageWrap.querySelector('.arrow-down');
   const linkWrap = imageWrap.querySelector('.link-wrap');
   const link = linkWrap.querySelector('a');
-
-  const centerClickAreaSize = 50; // Size in percentage, adjust as needed
+  const centerClickAreaSize = 50;
 
   scrollCont.addEventListener('click', (event) => {
     const { offsetX, offsetY } = event;
@@ -46,6 +44,7 @@ imageWraps.forEach((imageWrap) => {
     scrollCont.scrollTop += scrollAmount;
   });
 });
+
 
 // Grab year for copyright
 window.onload = function () {
